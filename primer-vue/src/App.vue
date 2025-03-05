@@ -1,28 +1,22 @@
 <script setup>
-    const name = "Vue 3";
-    const arrayFrutas = [
-        {
-            name: "Manzana",
-            price: "$1.00",
-            description: "Una manzana",
-        },
-        {
-            name: "Pera",
-            price: "$2.00",
-            description: "Una pera",
-        },
-        {
-            name: "Naranja",
-            price: "$3.00",
-            description: "Una naranja",
-        },
-    ];
+const name = "Vue 3";
+
+const handleClick = (message) => {
+  console.log(message) 
+}
 </script>
+
 <template>
-  <h1> hola vue {{ name.toUpperCase() }}</h1>
-  <ul>
-    <li v-for="fruta in arrayFrutas" :key="fruta.name"> 
-      {{ fruta.name }} - {{ fruta.price }} - {{ fruta.description }}
-    </li>
-  </ul>
+  <h1> hola {{ name.toUpperCase() }}</h1>
+  <button v-on:click.right="handleClick('Texto Rigth')">Activame rigth</button>
+  <button @click="handleClick('Texto Left')">Activame Left</button>
+  <button @click="handleClick('Texto Meddle')">Activame Meddle</button>
+
 </template>
+
+<style>
+h1 {
+  color: blue;
+}
+</style>
+
