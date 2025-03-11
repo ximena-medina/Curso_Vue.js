@@ -1,3 +1,7 @@
+# Ejemplo curso de udemy
+
+[Preview page](https://tubular-truffle-084f1d.netlify.app/)
+
 # componentes-1
 
 This template should help get you started developing with Vue 3 in Vite.

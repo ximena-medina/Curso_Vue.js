@@ -1,5 +1,5 @@
 <script setup> 
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 import BlogPost from "./components/BlogPost.vue";
 import PaginatePost from "./components/PaginatePost.vue";
@@ -26,6 +26,8 @@ const Previus = () => {
   start.value = start.value - postXpage
   end.value = end.value - postXpage
 }
+
+// Otras alternativas: utilizar el onMounted (async()) o un cosnt fetchData = async() => {}
 
 fetch('https://jsonplaceholder.typicode.com/posts')
   .then((res) => res.json())  
