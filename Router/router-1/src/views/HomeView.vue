@@ -1,9 +1,18 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import {useCounterStore} from '@/store/counter.js' 
+import { storeToRefs } from 'pinia'
+
+
+const useCounter = useCounterStore()
+const {increment} = useCounter
+const {count, double} = storeToRefs(useCounter) //Para extraer propiedades de la tienda manteniendo su reactividad, debemos usar storeToRefs().
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1> Home counter: {{ count }} </h1>
+    <h2> Home double: {{ double }}</h2>
+    <button @click="increment"> Increment</button>
   </main>
 </template>
