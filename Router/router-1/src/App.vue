@@ -6,21 +6,39 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <nav class="navbar bg-dark navbar-dark">
     <div class="container">
-      <RouterLink class="navbar-brand" to="/">
+      <router-link class="navbar-brand" to="/">
         <img 
-        src="@/assets/logo.svg" 
-        alt="Logo" width="30" height="24" 
-        class="d-inline-block align-text-top text-white">
+          src="@/assets/logo.svg" 
+          alt="Logo" width="30" height="24" 
+          class="d-inline-block align-text-top text-white"
+        />
         pokeapi
-      </RouterLink>
+      </router-link>
       <div>
-        <RouterLink to="/"> Home </RouterLink>
-        <RouterLink class="text-white" to="/superhero"> Personajes </RouterLink>
+        <router-link
+            active-class="active"
+            class="btn btn-outline-primary me-2"
+            to="/"
+          > Home </router-link
+        >
+        <router-link
+            active-class="active"
+            to="/superhero"
+            class="btn btn-otline-primary text-white me-2"
+          > Personajes </router-link
+        >
+        <router-link
+            active-class="active"
+            to="/favoritos"
+            class="btn btn-otline-primary text-white"
+          > Favoritos </router-link
+        >
       </div>
     </div>
   </nav>
+
   <div class="container text-center">
-    <RouterView/>
+    <RouterView></RouterView>
   </div>
 </template>
 

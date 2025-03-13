@@ -20,10 +20,15 @@ const router = createRouter({
       component: () => import('../views/SuperheroViews.vue'),
     },
     {
+      path: '/favoritos',
+      name: 'favoritos',
+      component: () => import('../views/FavoritosView.vue'),
+    },
+    {
       path: '/superhero/:name',
       name: 'super',
       component: () => import('../views/Super.vue'),
-    }
+    },
   ],
 })
 
