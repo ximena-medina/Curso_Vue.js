@@ -19,9 +19,11 @@ getData()
 
 <template>
     <h1> Personajes </h1>
-    <ul>
-        <li v-for="poke in superhero">
+    <ul class="list-group">
+        <li v-for="poke in superhero" class="list-group-item">
             <RouterLink :to="`/superhero/${poke.name}`">{{ poke.name }}</RouterLink>
         </li>
     </ul>
+    <button class="btn btn-secondary me-4"> Previus </button>
+    <button class="btn btn-success"> Next </button>
 </template>

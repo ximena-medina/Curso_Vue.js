@@ -4,23 +4,22 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar bg-dark navbar-dark">
     <div class="container">
-
       <RouterLink class="navbar-brand" to="/">
         <img 
         src="@/assets/logo.svg" 
         alt="Logo" width="30" height="24" 
-        class="d-inline-block align-text-top">
+        class="d-inline-block align-text-top text-white">
         pokeapi
       </RouterLink>
       <div>
         <RouterLink to="/"> Home </RouterLink>
-        <RouterLink to="/superhero"> Personajes </RouterLink>
+        <RouterLink class="text-white" to="/superhero"> Personajes </RouterLink>
       </div>
     </div>
   </nav>
-  <div class="container">
+  <div class="container text-center">
     <RouterView/>
   </div>
 </template>
