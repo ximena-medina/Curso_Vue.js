@@ -10,6 +10,3 @@ const increment = () => {
 <template>
   <button @click="increment"> Counter {{counter}} </button>
 </template>
-
-<style>
-</style>
