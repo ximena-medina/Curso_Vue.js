@@ -1,25 +1,28 @@
 import axios from "axios"
 import { ref } from "vue"
 
-export const useGetData = () => {
+export const useGetData = () => { //Definir cada "ruta" y siempre retonar cada valor
     const data = ref(null)
+    const error = ref(null)
     const loading = ref(true)
 
-    const getData = async(url) => {
+    const getData = async (url) => {
         loading.value = true
         try {
             const res = await axios.get(url)
             data.value = res.data
-
-        } catch (error) {
-            console.log(error)
+        } catch (e) {
+            // console.log(e);
+            error.value = "Error de servidor"
         } finally {
             loading.value = false
         }
-    }
+    };
+
     return {
         getData,
         data,
-        loading
-    }
-}
+        loading,
+        error,
+    };
+};

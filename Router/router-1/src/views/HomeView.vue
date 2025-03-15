@@ -5,7 +5,7 @@ import { storeToRefs } from 'pinia'
 
 const useCounter = useCounterStore()
 const {increment} = useCounter
-const {count, double} = storeToRefs(useCounter) //Para extraer propiedades de la tienda manteniendo su reactividad, debemos usar storeToRefs().
+const {count, double} = storeToRefs(useCounter) //Para extraer propiedades de la tienda manteniendo su reactividad, debemos usar storeToRefs(). Se usa para la destructuracion.
 
 </script>
 
