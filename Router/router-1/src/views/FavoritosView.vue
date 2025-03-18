@@ -19,7 +19,7 @@ const { remove } = useFavoritos;
             </div>
             <div>
                 <router-link
-                    class="btn btn-sm btn-primary me-2"
+                    class="btn btn-sm btn-info me-2"
                     :to="`/pokemons/${poke.name}`"
                 >
                     Más información

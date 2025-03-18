@@ -13,6 +13,6 @@ const {count, double} = storeToRefs(useCounter) //Para extraer propiedades de la
   <main>
     <h1> Home counter: {{ count }} </h1>
     <h2> Home double: {{ double }}</h2>
-    <button @click="increment"> Increment</button>
+    <button class="btn btn-secondary" @click="increment"> Increment</button>
   </main>
 </template>
