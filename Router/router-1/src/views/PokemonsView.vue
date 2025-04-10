@@ -14,14 +14,13 @@ getData("https://pokeapi.co/api/v2/pokemon");
     <div v-if="data">
         <ul class="list-group">
             <li v-for="poke in data.results" class="list-group-item">
-                <router-link :to="`/pokemons/${poke.name}`">{{
-                    poke.name
-                }}</router-link>
+                <router-link :to="`/pokemons/${poke.name}`">
+                    {{ poke.name }}</router-link>
             </li>
         </ul>
         <div class="mt-2">
             <button
-                :disabled="!data.previous"
+                :disabled="!data.previous"3
                 class="btn btn-success me-2"
                 @click="getData(data.previous)"
             >
@@ -32,7 +31,7 @@ getData("https://pokeapi.co/api/v2/pokemon");
                 class="btn btn-primary"
                 @click="getData(data.next)"
             >
-                Next
+                Next 
             </button>
         </div>
     </div>
